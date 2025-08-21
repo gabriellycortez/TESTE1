@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Escape Room Matemático</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background-color: #111; color: #eee; }
+    input { padding: 8px; margin: 10px; border-radius: 5px; border: none; }
+    button { padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #218838; }
+  </style>
+</head>
+<body>
+  <h1>🔐 Fase 1</h1>
+  <p>Resolva: 3x + 5 = 20. Qual o valor de x?</p>
+  <input type="number" id="resposta" placeholder="Digite sua resposta">
+  <button onclick="verificar()">Enviar</button>
+  <p id="resultado"></p>
+
+  <script>
+    function verificar() {
+      let r = document.getElementById("resposta").value;
+      if (r == 5) {
+        document.getElementById("resultado").innerHTML = "✅ Correto! Vá para a próxima pista: <a href='fase2.html'>Clique aqui</a>";
+      } else {
+        document.getElementById("resultado").innerHTML = "❌ Resposta incorreta. Tente novamente!";
+      }
+    }
+  </script>
+</body>
+</html>
